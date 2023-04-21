@@ -21,3 +21,5 @@
 }
 
 ...
+
+- Once you've added your DB as listed above go to the source folder and execute `npx sequelize db:create`
