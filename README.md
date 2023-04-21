@@ -6,4 +6,6 @@ middlewares/
 services/
 utils/
 config/
-repository/ - tests/ [later]
+repository/
+
+- tests/ [later]
