@@ -10,6 +10,15 @@ class CityRepository {
 		}
 	}
 
+	async createCities(cityNames) {
+		try {
+			const cities = await City.bulkCreate(cityNames);
+			return cities;
+		} catch (error) {
+			throw { error };
+		}
+	}
+
 	async deleteCity(cityId) {
 		try {
 			await City.destroy({
