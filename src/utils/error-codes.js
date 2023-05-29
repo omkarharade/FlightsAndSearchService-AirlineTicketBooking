@@ -5,8 +5,8 @@ const ClientErrorCodes = Object.freeze({
 });
 
 const ServerErrorCodes = Object.freeze({
-	OK: 200,
-	CREATED: 201,
+	OK: 500,
+	CREATED: 501,
 });
 
 const SuccessCodes = Object.freeze({
