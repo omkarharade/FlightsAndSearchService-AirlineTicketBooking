@@ -1,5 +1,6 @@
-// const CrudRepository = require("./crud-repository");
-const Airport = require("../models/airport");
+const { Airport } = require("../models/index");
+const { Op } = require("sequelize");
+
 class AirportRepository {
 	async createAirport(airportData) {
 		try {
@@ -81,12 +82,5 @@ class AirportRepository {
 		}
 	}
 }
-
-// class AirportRepository extends CrudRepository {
-// 	constructor() {
-// 		console.log(typeof Airport);
-// 		super(Airport);
-// 	}
-// }
 
 module.exports = AirportRepository;
