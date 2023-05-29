@@ -1,9 +1,9 @@
 const { AirportService } = require("../services/index");
-
 const airportService = new AirportService();
 
 const create = async (req, res) => {
 	try {
+		console.log(req.body);
 		const airport = await airportService.createAirport(req.body);
 		return res.status(201).json({
 			data: airport,

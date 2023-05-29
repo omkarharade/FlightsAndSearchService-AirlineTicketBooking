@@ -1,5 +1,5 @@
 const { AirportRepository } = require("../repository/index");
-
+const CrudService = require("./crud-service");
 class AirportService {
 	constructor() {
 		this.airportRepository = new AirportRepository();
@@ -9,16 +9,6 @@ class AirportService {
 		try {
 			const airport = await this.airportRepository.createAirport(data);
 			return airport;
-		} catch (error) {
-			console.log("something went wrong at service layer");
-			throw error;
-		}
-	}
-
-	async createAirports(data) {
-		try {
-			const airports = await this.airportRepository.createAirports(data);
-			return airports;
 		} catch (error) {
 			console.log("something went wrong at service layer");
 			throw error;
@@ -70,5 +60,21 @@ class AirportService {
 		}
 	}
 }
+
+// class AirportService extends CrudService {
+// 	constructor() {
+// 		const airportRepository = new AirportRepository();
+// 		super(airportRepository);
+// 	}
+
+// 	async createAirports(data) {
+// 		try {
+// 			const airports = await this.airportRepository.createAirports(data);
+// 			return airports;
+// 		} catch (error) {
+// 			console.log("something went wrong at service layer");
+// 			throw error;
+// 		}
+// 	}
 
 module.exports = AirportService;
